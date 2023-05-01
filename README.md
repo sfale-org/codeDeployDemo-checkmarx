@@ -10,16 +10,9 @@ This is a node.js project same, but change config as per your project requiremen
 
 
 In codebuild.yml file in post build phase, line:
-      - aws deploy push --application-name "${CODE_DEPLOY_APPLICATION_NAME}" --s3-location "s3://${CODE_DEPLOY_S3_BUCKET}/codedeploydemo/app.zip" --ignore-hidden-files --region us-west-2
+      - aws deploy push --application-name "${CODE_DEPLOY_APPLICATION_NAME}" --s3-location "s3://${CODE_DEPLOY_S3_BUCKET}/codedeploydemo/app.zip" --ignore-hidden-files --region us-east-2
 
 You can enavironment variable in code build : CODE_DEPLOY_APPLICATION_NAME, CODE_DEPLOY_S3_BUCKET and the value will reflect in the command. 
-
-Check Previous Videos to make sense of this implementation:
-
-
-
-Keep learning , Keep improving 
-
 
 aws deploy push --application-name "${CODE_DEPLOY_APPLICATION_NAME}" --s3-location "s3://${CODE_DEPLOY_S3_BUCKET}/codedeploydemo/app.zip" --ignore-hidden-files --region us-west-2
 
@@ -36,9 +29,5 @@ cd /home/ubuntu
 wget https://aws-codedeploy-us-west-2.s3.us-west-2.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
-
-
-node-app-youtube-demo
-
 
 aws deploy push --application-name NodeAppServerDeployment --s3-location "s3://node-app-youtube-demo/codedeploydemo/app.zip" --ignore-hidden-files 
